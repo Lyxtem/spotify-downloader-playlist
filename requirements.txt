@@ -1,0 +1,5 @@
+Flask==2.0.2
+requests==2.26.0
+spotdl==3.7.0  # Asegúrate de tener la versión correcta; puede cambiar
+apscheduler==3.7.0
+gunicorn==20.1.0
