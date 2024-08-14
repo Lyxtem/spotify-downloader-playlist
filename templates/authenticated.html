@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Playlist Downloader</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+<h1>Spotify Playlist Downloader</h1>
+<p>Welcome, {{ user['username'] }}#{{ user['discriminator'] }}!</p>
+<form action="{{ url_for('download') }}" method="POST">
+<label for="playlist_name">Playlist Name:</label>
+<input type="text" id="playlist_name" name="playlist_name" required>
+<br>
+<label for="playlist_url">Playlist URL:</label>
+<input type="text" id="playlist_url" name="playlist_url" required>
+<br>
+<button type="submit">Download</button>
+</form>
+<a href="/logout">Logout</a>
+</div>
+</body>
+</html>
